@@ -3,8 +3,8 @@
 #include <iostream>
 #include <math.h>
 
-const unsigned int SCR_WIDTH = 1280;
-const unsigned int SCR_HEIGHT = 720;
+const unsigned int SCR_WIDTH = 1920;
+const unsigned int SCR_HEIGHT = 1080;
 double mouseX, mouseY;
 
 const char* vertexShaderSource = R"(
@@ -111,21 +111,21 @@ void main()
 )";
 
 
-float coord = 0.7f;
-//GLfloat vertices[] = {
-//    coord, -coord, 0.0f,
-//    -coord, -coord, 0.0f,
-//    -coord,  coord, 0.0f,
-//    coord,  coord, 0.0f,
-//coord, -coord, 0.0f
-//};
-
+float coord = 1.0f;
 GLfloat vertices[] = {
+    coord, -coord, 0.0f,
+    -coord, -coord, 0.0f,
+    -coord,  coord, 0.0f,
+    coord,  coord, 0.0f,
+coord, -coord, 0.0f
+};
+
+/*GLfloat vertices[] = {
     coord, 0.0f, 0.0f,
      0.0f, coord, 0.0f,
     -coord,  0.0f, 0.0f,
     0.0f, -coord, 0.0f
-};
+};*/
 
 
 int al = sizeof(vertices)/sizeof(vertices[0]); //вычисление числа вершин
